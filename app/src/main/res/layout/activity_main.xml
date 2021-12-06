@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rain"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:neumorph_shadowColorDark="@color/black"
+                app:neumorph_shadowColorLight="#504E4E"
+                app:neumorph_shapeType="pressed">
+                <EditText
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:hint="search..."
+                    android:textColorHint="@color/white"
+                    android:layout_margin="10dp"
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textPersonName" />
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:text="search.."
+                android:onClick="get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:id="@+id/city_name"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+            <ImageView
+                android:id="@+id/iv"
+                android:src="@drawable/sun"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/sky"
+                android:textSize="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_margin="20dp"
+                app:neumorph_shadowColorDark="#454444"
+                app:neumorph_shadowColorLight="#7A7979"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:neumorph_shapeType="pressed">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:id="@+id/tv_temp"
+                       android:gravity="center"
+                       android:textSize="40dp"
+                       android:textColor="@color/white"
+                       android:text="0.C"
+                       android:layout_width="150dp"
+                       android:layout_height="match_parent"/>
+                   <LinearLayout
+                       android:orientation="vertical"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+                       <TextView
+                           android:gravity="center"
+                           android:textSize="20dp"
+                           android:textColor="@color/white"
+                           android:text="hightest      lowest"
+                           android:layout_width="match_parent"
+                           android:layout_height="25dp"/>
+                       <TextView
+                           android:textSize="20dp"
+                           android:gravity="center"
+                           android:id="@+id/h_L_temp"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"/>
+                   </LinearLayout>
+               </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
